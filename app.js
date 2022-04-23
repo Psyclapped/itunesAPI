@@ -6,7 +6,7 @@ const arr = [];
 const search = async () => {
   try {
     const searchContents = textbox.value;
-    const res = await fetch(`https://itunes.apple.com/search?term=${searchContents}&media=music&entity=album&attribute=artistTerm&limit=10`);
+    const res = await fetch(`https://itunes.apple.com/search?term=${searchContents}&media=music&entity=album&attribute=artistTerm&offest=unlimited&limit=unlimited`);
 
     let arr = await res.json();
 
