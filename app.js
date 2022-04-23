@@ -19,7 +19,7 @@ const search = async () => {
 const showResults = (musicResults) => {
   const html = musicResults.results.map((result) => {
       return `
-      <div>
+      <div class="card">
         <img src="${result.artworkUrl100}" alt="${result.artistName}">
         <h3>${result.artistName}</h3>
         <h4>${result.collectionName}</h4>
