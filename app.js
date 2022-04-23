@@ -8,7 +8,7 @@ const search = async () => {
     const searchContents = textbox.value;
     const res = await fetch(`https://itunes.apple.com/search?term=${searchContents}&media=music&entity=album&attribute=artistTerm&limit=10`);
 
-    arr = await res.json();
+    let arr = await res.json();
 
     showResults(arr);
   } catch (error) {
@@ -18,7 +18,7 @@ const search = async () => {
 
 const showResults = (musicResults) => {
   const html = musicResults.results.map((result) => {
-    return `
+      return `
       <div>
         <img src="${result.artworkUrl100}" alt="${result.artistName}">
         <h3>${result.artistName}</h3>
