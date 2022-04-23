@@ -28,4 +28,10 @@ const showResults = (musicResults) => {
   results.innerHTML = html;
 };
 
+textbox.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    search();
+  }
+});
+
 search();
