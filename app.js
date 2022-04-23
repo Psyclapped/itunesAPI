@@ -1,6 +1,5 @@
 const textbox = document.getElementById('search');
 const results = document.getElementById('results');
-
 const arr = [];
 
 const search = async () => {
@@ -18,7 +17,7 @@ const search = async () => {
 
 const showResults = (musicResults) => {
   const html = musicResults.results.map((result) => {
-      return `
+    return `
       <div class="card">
         <img src="${result.artworkUrl100}" alt="${result.artistName}">
         <h3>${result.artistName}</h3>
